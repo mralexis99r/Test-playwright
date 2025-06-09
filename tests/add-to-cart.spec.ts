@@ -13,11 +13,22 @@ test.describe("Add to Cart", () => {
             await expect(page.locator('#twotabsearchtextbox')).toBeVisible();
             await page.fill('#twotabsearchtextbox', 'USB Hub');
             await page.keyboard.press('Enter');
-            await page.screenshot({path: "./Evidence/add-to-cart/Captures" + Date.now() + "screenshot.png"});
-            await page.pause();
+            await page.screenshot({path: "./Evidence/add-to-cart/" + Date.now() + "screenshot.png"});
             
         });
 
+        await test.step("User click on result of the search", async ({}) => {
+
+            await page.locator('.s-main-slot .s-result-item').first().waitFor({ state: 'visible' });
+            await page.locator('.s-main-slot .s-result-item').nth(0).click();
+            await page.waitForTimeout(2000) //Added timeout for the screenshot
+            await page.screenshot({ path: "./Evidence/add-to-cart/" + Date.now() + "screenshot.png" });
+        
+
+
+        });
+
+        
         
 
        
