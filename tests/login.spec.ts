@@ -43,7 +43,7 @@ test.describe("Test Suite", async () => {
             await page.screenshot({path: "./Evidence/Captures" + Date.now() + "screenshot.png"});
         });
 
-        /*await page.pause(); -- por si quiero pausar algo-- */ 
+        /*await page.pause(); -- por si quiero pausar algo-- */
 
     
     });
