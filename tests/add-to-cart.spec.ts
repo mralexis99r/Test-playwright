@@ -30,6 +30,15 @@ test.describe("Add to Cart", () => {
 
             await page.click("#add-to-cart-button");
             await page.screenshot({ path: "./Evidence/add-to-cart/" + Date.now() + "screenshot.png" });
+            
+        
+        });
+
+        await test.step("User click on 'proceedToRetailCheckout'", async ({}) => {
+
+            await page.getByRole('button', {name: 'Proceder al pago'}).click();
+            await page.waitForTimeout(2000) //added timeout for the screenshot
+            await page.screenshot({ path: "./Evidence/add-to-cart/" + Date.now() + "screenshot.png" });
             await page.pause();
         
         });
