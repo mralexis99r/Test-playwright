@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { describe } from 'node:test';
+import products from '../data/products.json'; // <-- here brings data
 
 test.describe("Add to Cart", () => {
 
