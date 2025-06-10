@@ -1,7 +1,4 @@
 [
   { "name": "USB Hub" },
-  { "name": "Wireless Headphones" },
-  { "name": "Mouse Logitech" },
-  { "name": "Gaming Keyboard" },
-  { "name": "HDMI Cable" }
+  { "name": "Wireless Headphones" }
 ]
